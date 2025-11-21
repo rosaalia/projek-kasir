@@ -1,0 +1,93 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #8B4513; /* Warna coklat batik */
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+main {
+    max-width: 1200px;
+    margin: 20px auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+#produk, #keranjang {
+    flex: 1;
+    min-width: 300px;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.produk-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.produk-img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-right: 15px;
+}
+
+.produk-info {
+    flex: 1;
+}
+
+.produk-info h3 {
+    margin: 0 0 10px 0;
+}
+
+.produk-info label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.produk-info select, .produk-info input[type="date"], .produk-info input[type="number"] {
+    width: 100%;
+    padding: 5px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #8B4513;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #A0522D;
+}
+
+#daftar-keranjang {
+    list-style: none;
+    padding: 0;
+}
+
+#daftar-keranjang li {
+    padding: 5px 0;
+    border-bottom: 1px solid #eee;
+}

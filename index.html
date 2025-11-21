@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kasir Toko Batik</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Kasir Toko Batik</h1>
+    </header>
+    <main>
+        <section id="produk">
+            <h2>Daftar Produk Batik</h2>
+            <div class="produk-item">
+                <img src="batik-parang.jpg" alt="Batik Motif Parang" class="produk-img">
+                <div class="produk-info">
+                    <h3>Batik Motif Parang</h3>
+                    <p>Harga: Rp 150.000</p>
+                    <label for="ukuran-parang">Ukuran Baju:</label>
+                    <select id="ukuran-parang">
+                        <option value="S">S</option>
+                        <option value="M">M</option>
+                        <option value="L">L</option>
+                        <option value="XL">XL</option>
+                    </select>
+                    <label for="tanggal-parang">Tanggal Pemesanan:</label>
+                    <input type="date" id="tanggal-parang">
+                    <input type="number" id="qty-parang" min="0" placeholder="Jumlah">
+                    <button onclick="tambahKeKeranjang('Batik Motif Parang', 150000, 'qty-parang', 'ukuran-parang', 'tanggal-parang')">Tambah ke Keranjang</button>
+                </div>
+            </div>
+            <div class="produk-item">
+                <img src="batik-kawung.jpg" alt="Batik Motif Kawung" class="produk-img">
+                <div class="produk-info">
+                    <h3>Batik Motif Kawung</h3>
+                    <p>Harga: Rp 200.000</p>
+                    <label for="ukuran-kawung">Ukuran Baju:</label>
+                    <select id="ukuran-kawung">
+                        <option value="S">S</option>
+                        <option value="M">M</option>
+                        <option value="L">L</option>
+                        <option value="XL">XL</option>
+                    </select>
+                    <label for="tanggal-kawung">Tanggal Pemesanan:</label>
+                    <input type="date" id="tanggal-kawung">
+                    <input type="number" id="qty-kawung" min="0" placeholder="Jumlah">
+                    <button onclick="tambahKeKeranjang('Batik Motif Kawung', 200000, 'qty-kawung', 'ukuran-kawung', 'tanggal-kawung')">Tambah ke Keranjang</button>
+                </div>
+            </div>
+            <div class="produk-item">
+                <img src="batik-mega.jpg" alt="Batik Motif Mega" class="produk-img">
+                <div class="produk-info">
+                    <h3>Batik Motif Mega</h3>
+                    <p>Harga: Rp 180.000</p>
+                    <label for="ukuran-mega">Ukuran Baju:</label>
+                    <select id="ukuran-mega">
+                        <option value="S">S</option>
+                        <option value="M">M</option>
+                        <option value="L">L</option>
+                        <option value="XL">XL</option>
+                    </select>
+                    <label for="tanggal-mega">Tanggal Pemesanan:</label>
+                    <input type="date" id="tanggal-mega">
+                    <input type="number" id="qty-mega" min="0" placeholder="Jumlah">
+                    <button onclick="tambahKeKeranjang('Batik Motif Mega', 180000, 'qty-mega', 'ukuran-mega', 'tanggal-mega')">Tambah ke Keranjang</button>
+                </div>
+            </div>
+        </section>
+        <section id="keranjang">
+            <h2>Keranjang Belanja</h2>
+            <ul id="daftar-keranjang"></ul>
+            <p>Total: Rp <span id="total">0</span></p>
+            <button onclick="checkout()">Checkout</button>
+            <button onclick="resetKeranjang()">Reset Keranjang</button>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
